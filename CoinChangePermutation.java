@@ -17,7 +17,7 @@ public class CoinChangePermutation {
         
             for (int amt = 1; amt < dp.length; amt++) {
                 for(int coin:coins){
-                    if(amt<=coin){
+                    if(amt>=coin){
 int remainingAmount = amt - coin;
                     dp[amt]+= dp[remainingAmount];
                     }
