@@ -13,6 +13,10 @@ public class CoinChangeCombination{
         int dp[]= new int[amount+1];
         dp[0]=1;
 
+
+        // pehle pure dp me ek coin ka aasa laa dia uske baad dusre ka
+        // permutation vale m ek hi loop m har dp[i] pe sab coins chla k dekh re hai
+        
         for(int i =0;i<n;i++){
             for (int j = coins[i]; j < dp.length; j++) {
                dp[j]+=dp[j-coins[i]];             
