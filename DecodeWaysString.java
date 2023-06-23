@@ -5,7 +5,9 @@ public class DecodeWaysString {
     
     Scanner sc = new Scanner(System.in);
     String in = sc.next();
-
+if (in.isEmpty() || in.charAt(0) == '0') {
+        System.out.println(0);
+    }
     int dp[]= new int[in.length()];
 
     dp[0]=1;
